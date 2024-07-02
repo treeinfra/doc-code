@@ -1,0 +1,8 @@
+{
+  "name": "doc-code",
+  "description": "An VSCode extension to support code edit in comment docs.",
+  "version": "0.0.0",
+  "engines": {
+    "vscode": "^1.90.0"
+  }
+}
