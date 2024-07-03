@@ -1,8 +1,35 @@
 {
   "name": "doc-code",
+  "displayName": "Doc Code",
   "description": "An VSCode extension to support code edit in comment docs.",
   "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/treeinfra/doc-code.git"
+  },
   "engines": {
     "vscode": "^1.90.0"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "check": "prettier --check .",
+    "compile": "rollup --config rollup.config.js",
+    "vsce.pack": "cd extension && vsce pack && cd ..",
+    "package": "node preprocess && npm run compile && npm run vsce.pack"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "9.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.14.9",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^2.29.0",
+    "prettier": "^3.3.2",
+    "rollup": "^4.18.0",
+    "tslib": "^2.6.3"
   }
 }
