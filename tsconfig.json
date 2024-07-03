@@ -3,5 +3,6 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "types": ["vitest/importMeta"]
-  }
+  },
+  "include": ["*.ts"]
 }
