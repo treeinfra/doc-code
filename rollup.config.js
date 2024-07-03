@@ -8,6 +8,7 @@ const common = defineConfig({
     "vscode",
     "vscode-languageclient/node",
     "vscode-languageserver/node",
+    "vscode-languageserver-textdocument",
   ],
 })
 
